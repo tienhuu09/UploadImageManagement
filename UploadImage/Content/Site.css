@@ -1,0 +1,1109 @@
+﻿/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 50px 0 50px 0;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 320px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .body-content {
+        padding: 0;
+    }
+}
+
+form1 {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.main-container {
+    width: 900px;
+    margin: 0 auto;
+    background-color: #363839 !important;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/*Div Default*/
+.divContainer {
+    width: 1200px;
+    height: 500px;
+    text-align: center;
+    background-color: red;
+}
+
+.user-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+    position: relative;
+}
+
+    .user-icon i {
+        color: #333;
+        font-size: 20px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+
+.fas {
+    font-size: 25px;
+    margin: 10px 0 0 0;
+    cursor: pointer;
+    color: white;
+}
+
+.icon-logout {
+    font-size: 20px;
+    width: 40px;
+    height: 30px;
+    margin: 0 0 0 15px;
+    cursor: pointer;
+    color: azure;
+    padding: 0 0 15px 0;
+}
+
+.logout-button::before {
+    font-family: "FontAwesome";
+    content: "\f2f5";
+    margin-right: 5px;
+}
+
+.textName {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+.btn-login {
+    width: 320px;
+    margin: 0 0 20px 0;
+}
+
+.box-password {
+}
+
+i.fas-image-icon {
+    color: #5CB338;
+    font-size: 30px;
+}
+
+.fas-file-icon {
+    color: #C1BAA1;
+    font-size: 30px;
+}
+
+/*user icon drop*/
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.custom-hr {
+    width: 100%;
+    height: 2px;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    background-color: #f0f0f0;
+    border: none;
+}
+
+/* Profile */
+.main-container-profile {
+    width: 1100px;
+    margin: 0 auto;
+    background-color: #363839;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container-profileGrid {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 15px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    color: white;
+}
+
+.item-container-profileLeft {
+    background-color: #363839;
+    flex-direction: column;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 0 0 10px 0;
+    height: 100%;
+    display: flex;
+}
+
+.item-introduce {
+    margin-left: 15px;
+}
+
+.icon-address {
+    color: slategray;
+}
+
+.p-address {
+    font-size: 18px;
+}
+
+.item-container-profileRight {
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-container-updateAvatar {
+    background-color: #363839;
+    justify-content: space-between;
+    align-items: self-start;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 0 0 10px 0;
+    height: 100%;
+    display: flex;
+}
+
+.createPost {
+    background-color: #363839;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.postAvatar {
+    background-color: #363839;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    display: flex;
+    height: 100%;
+}
+
+.post-image {
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.imagePost {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 50%;
+}
+
+.user-icon2 {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.h2-profile {
+    color: aliceblue;
+    padding: 30px 0 0 10px;
+}
+
+.p-profile {
+    color: antiquewhite;
+    font-size: 18px;
+    padding: 5px 0 0 14px;
+}
+
+.user-icon-profile {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    margin: 20px 0px 0 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.imagePost-Avatar {
+    width: 45px;
+    height: 45px;
+    margin: 10px 0 0 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.p-name-post {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 8px;
+    margin-bottom: 0px !important;
+}
+
+.p-createDate-post {
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 8px;
+    color: #b0b3b8;
+}
+
+.p-post-status {
+    font-size: 14px;
+    color: #b0b3b8;
+    margin-top: 12px;
+    margin-left: 2px;
+}
+
+.changeAvt {
+    color: wheat;
+}
+
+.form-control {
+    width: 300px;
+}
+
+.containerBox-profile {
+    background-color: #363839;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 0 0 10px 0;
+    height: 100%;
+    position: relative;
+}
+
+.post-a {
+    position: absolute;
+    text-decoration: none;
+    font-size: 20px;
+    right: 10px;
+    top: 10px;
+}
+
+.box-image {
+    margin-top: 5px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.child {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.list-image-profile {
+    width: 122px;
+    height: 125px;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+/* -- Tab menu --*/
+.tab-menu {
+    font-size: 18px;
+    display: flex;
+    gap: 20px;
+    margin-left: 20px;
+    border-bottom: 1px solid #333;
+    padding: 10px 0;
+}
+
+    .tab-menu a {
+        text-decoration: none;
+        color: #b0b3b8;
+        font-weight: 500;
+        padding-bottom: 5px;
+        position: relative;
+    }
+
+        .tab-menu a.active {
+            color: #1877f2;
+        }
+
+            .tab-menu a.active::after {
+                content: '';
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #1877f2;
+            }
+
+        .tab-menu a:hover {
+            color: #e4e6eb;
+        }
+/* -- End -- */
+
+.icon-ellipsis {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 16px;
+    color: #b0b3b8;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+/* -- Image.aspx -- */
+.main-container-imagePage {
+    border-radius: 8px;
+    width: 1100px;
+    min-height: 800px;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 15px;
+    flex-direction: column;
+    background-color: #363839;
+    justify-content: space-between;
+    align-items: self-start;
+    color: white;
+}
+
+.div-ImagePage {
+
+}
+
+.div-ImagePage h4 {
+    color: aliceblue;
+}
+
+/* Box Image */
+.imagePage-boxImage {
+    margin-top: 5px;
+    margin-left: 15px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.imagePage-child {
+    
+}
+
+.imagePage-image {
+    width: 207px;
+    height: 200px;
+    cursor: pointer;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 9px;
+    margin-bottom: 9px;
+    border-radius: 12px;
+}
+
+/* full image thumbnail */
+/*
+.thumbnail {
+    width: 200px;
+    cursor: pointer;
+}
+
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer; 
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 90%;
+    display: block;
+    margin: auto;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}*/
+/* End */
+
+/* ImageModal */
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    #myImg:hover {
+        opacity: 0.7;
+    }
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9);
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 50%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+/* End */
+
+/**/
+.icon-button {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    color: white;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 12px;
+}
+
+    .icon-button:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+.icon-pen-image {
+    color: ghostwhite;
+    font-size: 15px;
+}
+
+.icon-remove {
+    position: absolute;
+    left: 15px;
+}
+
+.btnLinkIcon {
+    margin-left: 30px;
+    left: 20px;
+    border: none; 
+    color: white;
+    font-weight: bolder;
+    width: 200px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Dropdown 2 */
+.user-dropdown2 {
+    display: inline-block;
+}
+
+.dropdown-btn2 {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+}
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    overflow: hidden;
+}
+
+    .dropdown-content2 a {
+        color: #fff;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+        .dropdown-content2 a:hover {
+            background-color: #444;
+        }
+
+.user-dropdown2:hover .dropdown-content2 {
+    display: block;
+}
+/*-----SlideShow Images-------*/
+.slideShow-container {
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+    .active,
+    .demo:hover {
+        opacity: 1;
+    }
+
+.slideShow-img {
+    width: 70%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+/**/
+
+/*-------Form Upload--------*/
+
+.postCreate {
+    background-color: #363839;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    height: 100%;
+}
+
+.div-post-upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.custum-file-upload {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #cacaca;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 48px 35px -48px rgba(0,0,0,0.1);
+}
+
+    .custum-file-upload .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .custum-file-upload .icon i
+        {
+            color: black;
+            font-size: 40px;
+            fill: rgba(75, 85, 99, 1);
+        }
+
+    .custum-file-upload .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .custum-file-upload .text span {
+            font-weight: 400;
+            color: rgba(75, 85, 99, 1);
+        }
+
+    .custum-file-upload .divfileupload {
+        display: none;
+    }
+
+.divuploadButton {
+    display: none;
+}
+
+.previewContainer {
+    min-height: 40px;
+}
+
+.js-btn {
+    text-align: center;
+    width: 100%;
+}
+/*-----End-----*/
+.icon-close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: darkgray;
+}
+
+/*--------------------------------*/
+/*test*/
+.mySlidesPost {
+    display: none;
+    position: relative;
+    text-align: center;
+}
+
+.prevPost, .nextPost {
+    cursor: pointer;
+    position: absolute;
+    padding: 16px;
+    top: 38%;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 10;
+}
+
+.nextPost {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prevPost {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+    .prevPost:hover, .nextPost:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+.previewContainer2 {
+    position: relative;
+    display: inline-block;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/*--------List Image Data---------*/
+.icon-lstImg {
+    width: 40px;
+    border-radius: 50%;
+}
+
+/*--------Add image data----------*/
+.btn-add-imageData {
+    border: none;
+    width: max-content;
+    height: 3rem;
+    display: flex;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient( to right, #1488CC,#2B32B2 );
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 30em;
+    user-select: none;
+    gap: 0.75rem;
+}
+
+.btn-create {
+    border: none;
+    width: max-content;
+    height: 3rem;
+    display: flex;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient( to right, #1488CC,#2B32B2 );
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 30em;
+    user-select: none;
+    gap: 0.75rem;
+}
+
+.container-input {
+    position: relative;
+}
+
+.input {
+    width: 160px;
+    padding: 10px 0 10px 40px;
+    border-radius: 9999px;
+    border: solid 1px #333;
+    transition: all .2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+}
+
+.container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+}
+
+.input:focus {
+    opacity: 1;
+    width: 250px;
+}
+
+.container-input span {
+    position: absolute;
+    font-size: 22px;
+    top: 13px;
+    left: 12px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.green-dot {
+    width: 20px;
+    height: 20px;
+    margin-top: 8px;
+    margin-left: 15px;
+    background-color: #6EC207;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.red-dot {
+    width: 20px;
+    height: 20px;
+    margin-top: 8px;
+    margin-left: 15px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/*Button check box*/
+/*body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+*/
+.checkbox {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.button-menu {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    background-color: #ffdd00;
+    border: 2px solid #1e1e1e;
+    color: #1e1e1e;
+    font-size: 36px;
+    font-weight: 700;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 3px 10px 0px rgba(16, 16, 16, 0.5);
+    transition: all 0.3s ease;
+}
+
+    .button-menu::before {
+        content: "+";
+    }
+
+.checkbox:checked ~ .button-menu::before {
+    content: "-";
+}
+
+.option {
+    position: absolute;
+    background-color: #1e1e1e;
+    border: 2px solid #ffdd00;
+    color: #ffdd00;
+    z-index: -1;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 700;
+    transform: translate(0, 0);
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.checkbox:checked ~ .option {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+.checkbox:checked ~ .option-a {
+    transition-delay: 0.2s;
+    transform: translateY(-55px) translateX(55px);
+}
+
+.checkbox:checked ~ .option-b {
+    transition-delay: 0.3s;
+    transform: translateX(80px);
+}
+
+.option:hover {
+    box-shadow: none;
+    transform: scale(0.95);
+}
+
+.divSelect {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #474e5d;
+    padding-top: 50px;
+}
+
+.divSelectImg {
+    display: flex;
+    flex-direction: row;
+}

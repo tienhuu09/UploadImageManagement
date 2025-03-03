@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainProfile.master.cs" Inherits="UploadImage.MainProfile" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <title></title>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="~/Content/Site.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/Style.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/Style2.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/Style3.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/JavaScript.js" type="text/javascript" />
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/bootstrap-grid.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <style>
+        .bg-primary {
+            background-image: linear-gradient(to right, #1A2980 0%, #00D9F5 100%);
+        }
+
+        body {
+            background: #18191a;
+        }
+
+        .memorize {
+            color: white;
+        }
+    </style>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" runat="server" href="~/">PicHub</a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
+                        <% if (Session["Account"] == null)
+                            { %>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Views/SignIn/Login">Login</a></li>
+                        <% }
+                            else
+                            { %>
+                        <% if (((UploadImage.Account)Session["Account"]).RoleAccount.ToString() == "Admin")
+                            { %>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Views/Admin/ImageData">ImageData</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Views/Admin/PostData">PostData</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Views/Admin/AccountData">AccountData</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Views/Admin/DocumentData">DocumentData</a></li>
+                        <% } %>
+                        <% } %>
+                    </ul>
+                </div>
+                <%if (Session["Account"] != null)
+                    { %>
+                <div class="user-box">
+                    <asp:Panel ID="Panel1" runat="server">
+                        <div class="user-dropdown">
+                            <asp:Image ID="imgUserMain" runat="server" CssClass="user-icon2 " />
+                            <i class="textName"><%= ((UploadImage.Account)Session["Account"]).Name %></i>
+
+                            <div class="dropdown-content">
+                                <a href="/Views/Post">Post</a>
+                                <a href="Settings">Settings</a>
+                                <asp:LinkButton ID="lnkLogout" runat="server" OnClick="lnkLogout_Click">Logout</asp:LinkButton>
+                            </div>
+                        </div>
+                    </asp:Panel>
+                </div>
+                <% } %>
+            </div>
+        </nav>
+
+        <div class="main-container-profile">
+            <div style="display: flex; flex-direction: row; padding: 10px;">
+                <% if (account.AccountInfo.IdImage == "empty")
+                    { %>
+                <asp:Image ID="imgUserIcon" runat="server" CssClass="user-icon-profile text-white" ImageUrl="~/images/user.png" />
+                <% }
+                    else
+                    { %>
+                <asp:Image ID="Image1" runat="server" CssClass="user-icon-profile" />
+                <%--<asp:Image ID="imgUserMain" runat="server" CssClass="user-icon-profile" ImageUrl="~/images/tien01.png" />--%>
+
+                <% } %>
+                <div>
+                    <h2 class="h2-profile"><%= account.Name %></h2>
+                    <p class="p-profile fw-bold">789 người theo dõi</p>
+                </div>
+            </div>
+            <hr class="custom-hr" />
+            <div style="display: flex; flex-direction: row;">
+                <div class="tab-menu">
+                    <a href="/Views/Post" id="postLink" runat="server">Bài viết</a>
+                    <a href="#" id="introduceLink" runat="server">Giới thiệu</a>
+                    <a href="#" id="freindLink" runat="server">Bạn bè</a>
+                    <a href="/Views/ImagePage" id="imageLink" runat="server">Ảnh</a>
+                    <a href="#" id="videoLink" runat="server">Video</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('.tab-menu a').click(function () {
+                    $('.tab-menu a').removeClass('active');
+
+                    $(this).addClass('active');
+                });
+            });
+        </script>
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
+    </asp:PlaceHolder>
+</body>
+</html>
